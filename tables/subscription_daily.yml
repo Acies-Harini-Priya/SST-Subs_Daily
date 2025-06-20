@@ -183,11 +183,6 @@ tables:
         type: sum
         description: total revenue from subscriptions
 
-      - name: tenure
-        sql:  datediff(TERM_START_DATE_date,TERM_END_DATE)
-        type: datediff
-        description: no of days between term starting and ending terms
-
       - name:  no_of_renewals
         sql:  sum("case when IS_RENEWAL_WORTH  then 1 else 0 end ")
         type: sum
