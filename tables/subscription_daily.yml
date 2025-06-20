@@ -1,189 +1,184 @@
 tables:
-  - name: SUBSCRIPTION_DAILY
+  - name: subscription_daily
     sql: {{ load_sql('subscription_daily') }}
-    description: Details of Subscription Daily
+    description: details of subscription daily
     public: true 
 
     dimensions:
-      - name: DS
+      - name: ds
         type: time
-        column: DS
-        description: "Snapshot date of the record"
+        column: ds
+        description: "snapshot date of the record"
 
-      - name: MONTH
+      - name: month
         type: time
-        column: MONTH
-        description: "Month associated with the record"
+        column: month
+        description: "month associated with the record"
 
-      - name: LOCATION_ID
+      - name: location_id
         type: number
-        column: LOCATION_ID
-        description: "Unique identifier for the location"
+        column: location_id
+        description: "unique identifier for the location"
 
-      - name: BILLING_ACCOUNT_ID
+      - name: billing_account_id
         type: number
-        column: BILLING_ACCOUNT_ID
-        description: "Unique billing account identifier"
+        column: billing_account_id
+        description: "unique billing account identifier"
 
-      - name: CONTRACT_NUMBER
+      - name: contract_number
         type: string
-        column: CONTRACT_NUMBER
-        description: "Identifier for the contract"
+        column: contract_number
+        description: "identifier for the contract"
 
-      - name: SUBSCRIPTION_NUMBER
+      - name: subscription_number
         type: number
-        column: SUBSCRIPTION_NUMBER
-        description: "Identifier for the subscription"
+        column: subscription_number
+        description: "identifier for the subscription"
 
-      - name: CONTRACT_STATUS
+      - name: contract_status
         type: string
-        column: CONTRACT_STATUS
-        description: "Current status of the contract"
+        column: contract_status
+        description: "current status of the contract"
 
-      - name: PRODUCT_SKU
+      - name: product_sku
         type: string
-        column: PRODUCT_SKU
-        description: "Stock keeping unit for the product"
+        column: product_sku
+        description: "stock keeping unit for the product"
 
-      - name: PRODUCT_GROUP
+      - name: product_group
         type: string
-        column: PRODUCT_GROUP
-        description: "Group/category of the product"
+        column: product_group
+        description: "group/category of the product"
 
-      - name: ADVERTISER_ID
+      - name: advertiser_id
         type: string
-        column: ADVERTISER_ID
-        description: "Unique identifier for the advertiser"
+        column: advertiser_id
+        description: "unique identifier for the advertiser"
 
-      - name: CAMPAIGN_ID
+      - name: campaign_id
         type: string
-        column: CAMPAIGN_ID
-        description: "Unique identifier for the campaign"
+        column: campaign_id
+        description: "unique identifier for the campaign"
 
-      - name: ADVERTISER_NAME
+      - name: advertiser_name
         type: string
-        column: ADVERTISER_NAME
-        description: "Name of the advertiser"
+        column: advertiser_name
+        description: "name of the advertiser"
 
-      - name: COUNTRY
+      - name: country
         type: string
-        column: COUNTRY
-        description: "Name of the country"
+        column: country
+        description: "name of the country"
         primary_key: true
 
-      - name: CONTINENT
+      - name: continent
         type: string
-        column: CONTINENT
-        description: "Continent to which the country belongs"
+        column: continent
+        description: "continent to which the country belongs"
 
-      - name: PLACE_TYPE
+      - name: place_type
         type: string
-        column: PLACE_TYPE
-        description: "Type of place or region (e.g., metro, urban)"
+        column: place_type
+        description: "type of place or region (e.g., metro, urban)"
 
-      - name: CONTRACT_FREE_TRIAL
+      - name: contract_free_trial
         type: boolean
-        column: CONTRACT_FREE_TRIAL
-        description: "Indicates if the contract has a free trial period"
+        column: contract_free_trial
+        description: "indicates if the contract has a free trial period"
 
-      - name: NET_BILLING_UNIT_USD
+      - name: net_billing_unit_usd
         type: number
-        column: NET_BILLING_UNIT_USD
-        description: "Net billing unit in USD"
+        column: net_billing_unit_usd
+        description: "net billing unit in usd"
 
-      - name: BEGINNING_NET_MRR_USD
+      - name: beginning_net_mrr_usd
         type: number
-        column: BEGINNING_NET_MRR_USD
-        description: "Net Monthly Recurring Revenue at the beginning"
+        column: beginning_net_mrr_usd
+        description: "net monthly recurring revenue at the beginning"
 
-      - name: NEW_NET_MRR_USD
+      - name: new_net_mrr_usd
         type: number
-        column: NEW_NET_MRR_USD
-        description: "Net new MRR in USD"
+        column: new_net_mrr_usd
+        description: "net new mrr in usd"
 
-      - name: UPGRADE_NET_MRR_USD
+      - name: upgrade_net_mrr_usd
         type: number
-        column: UPGRADE_NET_MRR_USD
-        description: "Net MRR added from upgrades"
+        column: upgrade_net_mrr_usd
+        description: "net mrr added from upgrades"
 
-      - name: DOWNGRADE_NET_MRR_USD
+      - name: downgrade_net_mrr_usd
         type: number
-        column: DOWNGRADE_NET_MRR_USD
-        description: "Net MRR lost from downgrades"
+        column: downgrade_net_mrr_usd
+        description: "net mrr lost from downgrades"
 
-      - name: FX_ADJ_NET_MRR_USD
+      - name: fx_adj_net_mrr_usd
         type: number
-        column: FX_ADJ_NET_MRR_USD
-        description: "Net MRR after foreign exchange adjustment"
+        column: fx_adj_net_mrr_usd
+        description: "net mrr after foreign exchange adjustment"
 
-      - name: PLANNED_EXPIRY_NET_MRR_USD
+      - name: planned_expiry_net_mrr_usd
         type: number
-        column: PLANNED_EXPIRY_NET_MRR_USD
-        description: "MRR expected to expire due to planned expiry"
+        column: planned_expiry_net_mrr_usd
+        description: "mrr expected to expire due to planned expiry"
 
-      - name: UNPLANNED_NET_MRR_CHURN_USD
+      - name: unplanned_net_mrr_churn_usd
         type: number
-        column: UNPLANNED_NET_MRR_CHURN_USD
-        description: "MRR lost due to unplanned churn"
+        column: unplanned_net_mrr_churn_usd
+        description: "mrr lost due to unplanned churn"
 
-      - name: PLANNED_NET_MRR_CHURN_USD
+      - name: planned_net_mrr_churn_usd
         type: number
-        column: PLANNED_NET_MRR_CHURN_USD
-        description: "MRR lost due to planned churn"
+        column: planned_net_mrr_churn_usd
+        description: "mrr lost due to planned churn"
 
-      - name: ENDING_NET_MRR_USD
+      - name: ending_net_mrr_usd
         type: number
-        column: ENDING_NET_MRR_USD
-        description: "Net MRR at the end of the period"
+        column: ending_net_mrr_usd
+        description: "net mrr at the end of the period"
 
-      - name: TERM_START_DATE
+      - name: term_start_date
         type: time
-        column: TERM_START_DATE
-        description: "Start date of the contract term"
+        column: term_start_date
+        description: "start date of the contract term"
 
-      - name: TERM_END_DATE
+      - name: term_end_date
         type: time
-        column: TERM_END_DATE
-        description: "End date of the contract term"
+        column: term_end_date
+        description: "end date of the contract term"
 
-      - name: CONTRACT_START_DATE
+      - name: contract_start_date
         type: time
-        column: CONTRACT_START_DATE
-        description: "Start date of the contract"
+        column: contract_start_date
+        description: "start date of the contract"
 
-      - name: CANCELLATION_DS
+      - name: cancellation_ds
         type: time
-        column: CANCELLATION_DS
-        description: "Date the contract was cancelled"
+        column: cancellation_ds
+        description: "date the contract was cancelled"
 
-      - name: MIN_CL_DATE
+      - name: min_cl_date
         type: time
-        column: MIN_CL_DATE
-        description: "Minimum closing date"
+        column: min_cl_date
+        description: "minimum closing date"
 
-      - name: IS_RENEWAL_MONTH
+      - name: is_renewal_month
         type: boolean
-        column: IS_RENEWAL_MONTH
-        description: "Indicates if the current month is a renewal month"
+        column: is_renewal_month
+        description: "indicates if the current month is a renewal month"
 
-      - name: RN
+      - name: rn
         type: number
-        column: RN
-        description: "Row number or rank indicator"
+        column: rn
+        description: "row number or rank indicator"
       
 
     measures:
       - name: distinct_product_group
-        sql:  PRODUCT_GROUP
+        sql:  product_group
         type: count_distinct
-        description: Counts the distinct product groups
+        description: counts the distinct product groups
 
       - name: total_revenue
-        sql: ENDING_NET_MRR_USD
+        sql: ending_net_mrr_usd
         type: sum
         description: total revenue from subscriptions
-
-      - name:  no_of_renewals
-        sql:  sum("case when IS_RENEWAL_WORTH  then 1 else 0 end ")
-        type: sum
-        description: count of renewals
